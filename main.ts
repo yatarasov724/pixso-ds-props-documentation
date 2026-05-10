@@ -2,11 +2,11 @@ import { propsDictionary } from "./data/propsDictionary";
 import { techComponentsExclusions } from "./data/techComponentsExclusions";
 import { propSynonyms } from "./data/propSynonyms";
 
-const COMPONENT_KEY_CONTENT_BLOCK = "6a3a8b02284f85fc7e4ea90abcc438d6d281e4ba";
-const COMPONENT_KEY_DOC_HEADER     = "81a02d35e9740bdeff404d74ca71493651e9429e";
-const COMPONENT_KEY_DOC_NAVIGATION = "33badd834eb4e0b512e633ae466e03db518220f3";
-const COMPONENT_KEY_STATUS_NAV     = "9f8db8b949d24fa44cc6354e56fe207fd24a2ad7";
-const COMPONENT_KEY_DOC_LAYOUT     = "94095aff7f0430a96100a198cbb82e72309372f8";
+const COMPONENT_KEY_CONTENT_BLOCK = "8bb51a4f746fb998f6523b6f89c04e597becbcf5";
+const COMPONENT_KEY_DOC_HEADER     = "49967266e8fbba936b4a912914c13cf9489c48f7";
+const COMPONENT_KEY_DOC_NAVIGATION = "8a65e5fafe88b6af52ad98fbd61328d6a2b5a9a3";
+const COMPONENT_KEY_STATUS_NAV     = "f655783c1ad8308b15390a496fc689b576c69a0d";
+const COMPONENT_KEY_DOC_LAYOUT     = "1e2dbb8226da6142285fefddd43c4c062aed6579";
 
 pixso.showUI(__html__, { width: 720, height: 560 });
 
