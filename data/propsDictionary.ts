@@ -362,14 +362,11 @@ export const propsDictionary = {
     category: "component",
   },
 
-  "mask-value": {
-    designName: "mask-value",
-    codeName: "mask-value",
-    type: "string",
-    description:
-      "Строка-шаблон маски, отображаемая в поле ввода",
-    category: "component",
-  },
+  "mask-value": createTextProp(
+    "mask-value",
+    "Отображение строки-шаблона маски",
+    "Строка-шаблон маски, отображаемая в поле ввода"
+  ),
 
   clearable: {
     designName: "clearable",
