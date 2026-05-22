@@ -353,18 +353,9 @@ export const propsDictionary = {
     "Подсказывающий текст, отображаемый в пустом поле ввода"
   ),
 
-  mask: {
-    designName: "mask",
-    codeName: "mask",
-    type: "boolean",
-    description:
-      "Включает маскирование ввода — визуально отображает что маска активна",
-    category: "component",
-  },
-
-  "mask-value": createTextProp(
-    "mask-value",
-    "Отображение строки-шаблона маски",
+  mask: createTextProp(
+    "mask",
+    "Включает маскирование ввода — визуально отображает что маска активна",
     "Строка-шаблон маски, отображаемая в поле ввода"
   ),
 

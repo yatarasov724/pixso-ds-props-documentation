@@ -240,11 +240,7 @@ export const propSynonyms: Record<string, string[]> = {
   mask: [
     "masked", "isMasked", "hasMask", "maskEnabled",
     "withMask", "maskMode", "maskType",
-  ],
-
-  "mask-value": [
-    "maskPattern", "maskString", "maskFormat", "maskText",
-    "maskInput", "maskPlaceholder",
+    "maskPattern", "maskString", "maskFormat", "maskValue",
   ],
 
   clearable: [
