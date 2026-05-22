@@ -347,12 +347,27 @@ export const propsDictionary = {
     category: "component",
   },
 
-  placeholder: {
-    designName: "placeholder",
-    codeName: "placeholder",
+  placeholder: createTextProp(
+    "placeholder",
+    "Переключает между пустым (placeholder) и заполненным состоянием",
+    "Подсказывающий текст, отображаемый в пустом поле ввода"
+  ),
+
+  mask: {
+    designName: "mask",
+    codeName: "mask",
     type: "boolean",
     description:
-      "Переключает между пустым (placeholder) и заполненным состоянием. В коде placeholder — строка с подсказывающим текстом",
+      "Включает маскирование ввода — визуально отображает что маска активна",
+    category: "component",
+  },
+
+  "mask-value": {
+    designName: "mask-value",
+    codeName: "mask-value",
+    type: "string",
+    description:
+      "Строка-шаблон маски, отображаемая в поле ввода",
     category: "component",
   },
 

@@ -237,6 +237,16 @@ export const propSynonyms: Record<string, string[]> = {
     "emptyState", "isPlaceholder", "showPlaceholder",
   ],
 
+  mask: [
+    "masked", "isMasked", "hasMask", "maskEnabled",
+    "withMask", "maskMode", "maskType",
+  ],
+
+  "mask-value": [
+    "maskPattern", "maskString", "maskFormat", "maskText",
+    "maskInput", "maskPlaceholder",
+  ],
+
   clearable: [
     "isClearable", "clear", "clearButton", "clearIcon",
     "hasClear", "showClear", "resetable", "erasable",
