@@ -1,0 +1,125 @@
+ПРАВИЛА НЕЙМИНГА ПРОПОВ ДИЗАЙН-СИСТЕМЫ
+========================================
+
+
+СИНТАКСИС
+----------
+
+kebab-case для всех имён (строчные буквы, слова через дефис)
+  Правильно:   icon-before
+  Неправильно: iconBefore, icon_before, IconBefore
+
+Без префикса is у булевых
+  Правильно:   disabled, loading
+  Неправильно: isDisabled, isLoading
+
+Без префикса has
+  Правильно:   closable, scrollbar
+  Неправильно: hasCloseButton, hasScrollbar
+
+Без префикса show
+  Правильно:   actions, image
+  Неправильно: showActions, showImage
+
+Слот: content / element / icon + позиция суффиксом
+  Правильно:   content-before, icon-after
+  Неправильно: leftContent, prefixIcon, startIcon
+
+
+========================================
+СТАНДАРТНЫЕ ПРОПЫ: ОБЛИК И ПОВЕДЕНИЕ
+========================================
+
+ПРОП                ЧТО ОПИСЫВАЕТ                                    ЗАПРЕЩЁННЫЕ СИНОНИМЫ
+variant             Функциональный тип + визуальная семантика         type, kind, appearance, color, intent
+mode                Визуальный стиль (менее семантичен, чем variant)  theme, look, displayMode, colorMode
+size                Высота, шрифт, внутренние отступы                 scale, dimension, small, large, inputSize
+padding             Плотность без смены габаритов                     spacing, density, gap, indent
+orientation         Направление главной оси                           direction, axis, layout, flow
+state               Визуальный статус: enabled, hover, active, focus, disabled, readonly   status, uiState, interactionState
+validation-status   Результат валидации (error / warning / success)   error, validity, hasError, fieldState
+
+
+========================================
+СТАНДАРТНЫЕ ПРОПЫ: БУЛЕВЫ СОСТОЯНИЯ
+========================================
+
+ПРОП              ЧТО ОПИСЫВАЕТ                                    ЗАПРЕЩЁННЫЕ СИНОНИМЫ
+loading           В процессе загрузки                               isLoading, pending, busy, spinner
+selected          Выбран                                            isSelected, checked, active, highlighted
+expanded          Раскрыт                                           isExpanded, open, isOpen, collapsed
+interactive       Статичный элемент стал интерактивным              clickable, hoverable, isClickable
+draggable         Можно перетаскивать                               isDraggable, sortable, drag
+resizable         Можно изменять размер                             isResizable, resize, scalable
+closable          Есть кнопка закрытия                              isClosable, dismissible, removable
+placeholder       Пустое / placeholder-состояние                    isEmpty, empty, hasPlaceholder
+clearable         Есть кнопка очистки                               isClearable, clear, hasClear
+truncate-text     Обрезает текст многоточием                        ellipsis, truncate, textOverflow
+scrollbar         Видна полоса прокрутки                            scroll, scrollable, hasScrollbar
+filled            Есть введённое или выбранное значение             isFilled, hasValue, populated, nonEmpty
+
+
+========================================
+СТАНДАРТНЫЕ ПРОПЫ: ТЕКСТОВЫЙ КОНТЕНТ
+========================================
+
+ПРОП              ЧТО ОПИСЫВАЕТ                                    ЗАПРЕЩЁННЫЕ СИНОНИМЫ
+title             Заголовок                                         heading, header, label, name
+description       Вспомогательный текст                             subtitle, hint, helper, helperText, note
+value             Текущее значение                                  currentValue, inputValue, val, data
+
+
+========================================
+СТАНДАРТНЫЕ ПРОПЫ: СЛОТЫ
+========================================
+
+ПРОП              ЧТО ОПИСЫВАЕТ                                    ЗАПРЕЩЁННЫЕ СИНОНИМЫ
+children          Дефолтный вложенный контент                       body, inner, slot, defaultSlot
+content           Основной контент-слот                             body, mainContent, innerContent
+icon-before       Иконка перед контентом                            leftIcon, startIcon, prefixIcon, leadingIcon
+icon-after        Иконка после контента                             rightIcon, endIcon, suffixIcon, trailingIcon
+element-before    Компонент перед контентом                         componentBefore, nodeBefore, before
+element-after     Компонент после контента                          componentAfter, nodeAfter, after
+content-before    Свободный контент перед                           prefix, prepend, leading, startContent
+content-after     Свободный контент после                           suffix, append, trailing, endContent
+content-left      Контент слева                                     left, leftSlot, startSlot, leftSide
+content-right     Контент справа                                    right, rightSlot, endSlot, rightSide
+content-top       Контент сверху                                    top, topSlot, header, topSection
+content-bottom    Контент снизу                                     bottom, bottomSlot, footer
+content-centered  Контент по центру                                 center, middle, centerSlot
+element-left      Компонент слева                                   componentLeft, leftSlot, startSection
+element-right     Компонент справа                                  componentRight, rightSlot, endSection
+element-top       Компонент сверху                                  componentTop, topSlot, headerElement
+element-bottom    Компонент снизу                                   componentBottom, bottomSlot, footerElement
+element-centered  Компонент по центру                               componentCentered, centerElement
+
+
+========================================
+СТАНДАРТНЫЕ ПРОПЫ: ВИДИМОСТЬ БЛОКОВ
+========================================
+
+ПРОП              ЧТО ОПИСЫВАЕТ                                    ЗАПРЕЩЁННЫЕ СИНОНИМЫ
+image             Изображение / иллюстрация                         img, picture, thumbnail, hasImage
+actions           Блок нескольких действий                          buttons, controls, toolbar, footer
+action            Одиночное действие                                cta, button, actionButton
+notification      Уведомление внутри компонента                     alert, badge, indicator, notif
+
+
+========================================
+КЛЮЧЕВЫЕ РЕШЕНИЯ
+========================================
+
+variant vs mode
+  variant — если проп меняет семантику ("зачем")
+  mode    — если только внешний вид ("как")
+
+state включает disabled / readonly и визуальные hover / active / focus
+  loading — отдельный булевый проп
+
+Позиция через суффикс, не через префикс
+  Правильно:   icon-before, icon-after, content-left, element-top
+  Неправильно: leftIcon, topElement, startContent
+
+Слот: видимость и контент — один проп
+  В дизайне: icon-before (boolean) + 🔄 icon-before (instance swap)
+  В коде: оба маппятся на один проп icon-before

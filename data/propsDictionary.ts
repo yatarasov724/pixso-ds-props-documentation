@@ -103,7 +103,7 @@ export const propsDictionary = {
     codeName: "state",
     type: "enum",
     description:
-      "Визуальный интерактивный статус компонента в дизайне: enabled/default, hover, active, focus. Состояния disabled, loading и readonly вынесены в отдельные булевые пропы",
+      "Визуальный интерактивный статус компонента в дизайне: enabled/default, hover, active, focus, disabled, readonly",
     category: "component",
   },
 
@@ -116,27 +116,9 @@ export const propsDictionary = {
     category: "component",
   },
 
-  disabled: {
-    designName: "disabled",
-    codeName: "disabled",
-    type: "boolean",
-    description:
-      "Компонент недоступен для взаимодействия, визуально приглушён. Скринридеры объявляют элемент как unavailable",
-    category: "component",
-  },
-
-  readonly: {
-    designName: "readonly",
-    codeName: "readonly",
-    type: "boolean",
-    description:
-      "Значение доступно для просмотра, но не для редактирования. В отличие от disabled, элемент остаётся в фокусе и читается скринридерами",
-    category: "component",
-  },
-
-  validationStatus: {
-    designName: "validationStatus",
-    codeName: "validationStatus",
+  "validation-status": {
+    designName: "validation-status",
+    codeName: "validation-status",
     type: "enum",
     description:
       "Визуально отражает результат валидации через изменение цвета компонента и иконки состояния",
@@ -176,12 +158,6 @@ export const propsDictionary = {
     "Заголовок компонента"
   ),
 
-  text: createTextProp(
-    "text",
-    "Отображение основного текстового контента",
-    "Основной текстовый контент компонента"
-  ),
-
   description: createTextProp(
     "description",
     "Отображение вспомогательного текста",
@@ -206,98 +182,98 @@ export const propsDictionary = {
     "Контент компонента"
   ),
 
-  contentBefore: createSlotVisibilityProp(
-    "contentBefore",
+  "content-before": createSlotVisibilityProp(
+    "content-before",
     "Отображение контента перед основным содержимым",
     "Контент перед основным содержимым"
   ),
 
-  contentAfter: createSlotVisibilityProp(
-    "contentAfter",
+  "content-after": createSlotVisibilityProp(
+    "content-after",
     "Отображение контента после основного содержимого",
     "Контент после основного содержимого"
   ),
 
-  contentCentered: createSlotVisibilityProp(
-    "contentCentered",
+  "content-centered": createSlotVisibilityProp(
+    "content-centered",
     "Отображение контента по центру",
     "Контент по центру"
   ),
 
-  contentLeft: createSlotVisibilityProp(
-    "contentLeft",
+  "content-left": createSlotVisibilityProp(
+    "content-left",
     "Отображение контента слева",
     "Контент слева"
   ),
 
-  contentRight: createSlotVisibilityProp(
-    "contentRight",
+  "content-right": createSlotVisibilityProp(
+    "content-right",
     "Отображение контента справа",
     "Контент справа"
   ),
 
-  contentBottom: createSlotVisibilityProp(
-    "contentBottom",
+  "content-bottom": createSlotVisibilityProp(
+    "content-bottom",
     "Отображение контента снизу",
     "Контент снизу"
   ),
 
-  contentTop: createSlotVisibilityProp(
-    "contentTop",
+  "content-top": createSlotVisibilityProp(
+    "content-top",
     "Отображение контента сверху",
     "Контент сверху"
   ),
 
-  iconBefore: createSlotVisibilityProp(
-    "iconBefore",
+  "icon-before": createSlotVisibilityProp(
+    "icon-before",
     "Отображение иконки перед контентом",
     "Иконка перед контентом"
   ),
 
-  iconAfter: createSlotVisibilityProp(
-    "iconAfter",
+  "icon-after": createSlotVisibilityProp(
+    "icon-after",
     "Отображение иконки после контента",
     "Иконка после контента"
   ),
 
-  elementBefore: createSlotVisibilityProp(
-    "elementBefore",
+  "element-before": createSlotVisibilityProp(
+    "element-before",
     "Отображение элемента перед основным контентом",
     "Элемент перед основным контентом"
   ),
 
-  elementAfter: createSlotVisibilityProp(
-    "elementAfter",
+  "element-after": createSlotVisibilityProp(
+    "element-after",
     "Отображение элемента после основного контента",
     "Элемент после основного контента"
   ),
 
-  elementTop: createSlotVisibilityProp(
-    "elementTop",
+  "element-top": createSlotVisibilityProp(
+    "element-top",
     "Отображение элемента сверху",
     "Элемент сверху"
   ),
 
-  elementBottom: createSlotVisibilityProp(
-    "elementBottom",
+  "element-bottom": createSlotVisibilityProp(
+    "element-bottom",
     "Отображение элемента снизу",
     "Элемент снизу"
   ),
 
-  elementRight: createSlotVisibilityProp(
-    "elementRight",
+  "element-right": createSlotVisibilityProp(
+    "element-right",
     "Отображение элемента справа",
     "Элемент справа"
   ),
 
-  elementLeft: createSlotVisibilityProp(
-    "elementLeft",
+  "element-left": createSlotVisibilityProp(
+    "element-left",
     "Отображение элемента слева",
     "Элемент слева"
   ),
 
-  elementCentered: createSlotVisibilityProp(
-    "elementCentered",
+  "element-centered": createSlotVisibilityProp(
+    "element-centered",
     "Отображение элемента по центру",
     "Элемент по центру"
   ),
@@ -333,6 +309,15 @@ export const propsDictionary = {
     description:
       "Показывает или скрывает вложенный компонент уведомления. В коде передаётся ReactNode с нужным вариантом уведомления",
     category: "visibility",
+  },
+
+  filled: {
+    designName: "filled",
+    codeName: "filled",
+    type: "boolean",
+    description:
+      "Компонент находится в заполненном состоянии — есть введённое или выбранное значение",
+    category: "component",
   },
 
   draggable: {
@@ -389,9 +374,9 @@ export const propsDictionary = {
     category: "dev",
   },
 
-  truncateText: {
-    designName: "truncateText",
-    codeName: "truncateText",
+  "truncate-text": {
+    designName: "truncate-text",
+    codeName: "truncate-text",
     type: "boolean",
     description:
       "Обрезает переполняющий текст многоточием вместо переноса на новую строку",
