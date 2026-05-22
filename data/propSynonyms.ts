@@ -48,19 +48,7 @@ export const propSynonyms: Record<string, string[]> = {
     "spinner", "processing", "isProcessing",
   ],
 
-  disabled: [
-    "isDisabled", "inactive", "unavailable", "locked", "blocked",
-    "nonInteractive", "isInactive", "deactivated",
-    "forbidden", "isLocked", "isForbidden",
-  ],
-
-  readonly: [
-    "isReadonly", "readOnly", "nonEditable", "immutable",
-    "viewOnly", "displayOnly", "isReadOnly", "notEditable",
-    "locked", "isLocked", "editDisabled",
-  ],
-
-  validationStatus: [
+  "validation-status": [
     "error", "errorState", "validity", "valid", "invalid",
     "inputState", "fieldState", "validation", "hasError",
     "errorType", "validationState", "formStatus",
@@ -90,12 +78,6 @@ export const propSynonyms: Record<string, string[]> = {
     "headerText", "titleLabel",
   ],
 
-  text: [
-    "label", "body", "message", "copy", "bodyText",
-    "mainText", "textContent", "contentText",
-    "labelText", "innerText",
-  ],
-
   description: [
     "subtitle", "subtext", "hint", "helper", "note",
     "info", "details", "secondary", "helperText",
@@ -120,90 +102,90 @@ export const propSynonyms: Record<string, string[]> = {
     "contentSlot", "pageContent",
   ],
 
-  contentBefore: [
+  "content-before": [
     "prefix", "prepend", "leading", "before", "start",
     "startContent", "leftContent", "prependContent",
     "leadingContent", "prefixContent", "headerContent",
   ],
 
-  contentAfter: [
+  "content-after": [
     "suffix", "append", "trailing", "after", "end",
     "endContent", "rightContent", "appendContent",
     "trailingContent", "suffixContent", "footerContent",
   ],
 
-  contentCentered: [
+  "content-centered": [
     "center", "middle", "centerContent", "centeredContent",
     "centralContent", "middleContent", "centerSlot",
   ],
 
-  contentLeft: [
+  "content-left": [
     "left", "leftSlot", "startSlot", "leftSide",
     "startSide", "leftSection", "startSection",
   ],
 
-  contentRight: [
+  "content-right": [
     "right", "rightSlot", "endSlot", "rightSide",
     "endSide", "rightSection", "endSection",
   ],
 
-  contentBottom: [
+  "content-bottom": [
     "bottom", "bottomSlot", "footer",
     "belowContent", "bottomContent", "bottomSection",
   ],
 
-  contentTop: [
+  "content-top": [
     "top", "topSlot", "header",
     "aboveContent", "topContent", "topSection",
   ],
 
-  iconBefore: [
+  "icon-before": [
     "leftIcon", "startIcon", "prefixIcon", "leadingIcon",
     "iconLeft", "iconStart", "startAdornment",
     "adornmentStart", "iconPrefix", "leadIcon", "leftAdornment",
   ],
 
-  iconAfter: [
+  "icon-after": [
     "rightIcon", "endIcon", "suffixIcon", "trailingIcon",
     "iconRight", "iconEnd", "endAdornment",
     "adornmentEnd", "iconSuffix", "trailIcon", "rightAdornment",
   ],
 
-  elementBefore: [
+  "element-before": [
     "componentBefore", "nodeBefore", "slotBefore", "leftElement",
     "startElement", "prefixElement", "leadingElement",
     "adornmentBefore", "elementStart", "before",
     "prependElement", "startSlot", "leadingSlot",
   ],
 
-  elementAfter: [
+  "element-after": [
     "componentAfter", "nodeAfter", "slotAfter", "rightElement",
     "endElement", "suffixElement", "trailingElement",
     "adornmentAfter", "elementEnd", "after",
     "appendElement", "endSlot", "trailingSlot",
   ],
 
-  elementTop: [
+  "element-top": [
     "componentTop", "nodeTop", "topElement",
     "aboveElement", "headerElement", "topSlot", "topNode",
   ],
 
-  elementBottom: [
+  "element-bottom": [
     "componentBottom", "nodeBottom", "bottomElement",
     "belowElement", "footerElement", "bottomSlot", "bottomNode",
   ],
 
-  elementRight: [
+  "element-right": [
     "componentRight", "nodeRight", "rightSlot",
     "endSlot", "rightSection", "endSection", "rightNode",
   ],
 
-  elementLeft: [
+  "element-left": [
     "componentLeft", "nodeLeft", "leftSlot",
     "startSlot", "leftSection", "startSection", "leftNode",
   ],
 
-  elementCentered: [
+  "element-centered": [
     "componentCentered", "nodeCentered", "centerElement",
     "centeredElement", "middleElement", "centerSlot", "centerNode",
   ],
@@ -224,6 +206,11 @@ export const propSynonyms: Record<string, string[]> = {
     "alert", "badge", "indicator", "notif",
     "notify", "message", "warn", "warning",
     "notificationSlot", "alertSlot", "notificationBadge",
+  ],
+
+  filled: [
+    "isFilled", "hasValue", "withValue", "nonEmpty",
+    "entered", "populated", "inputFilled", "hasContent",
   ],
 
   draggable: [
@@ -263,7 +250,7 @@ export const propSynonyms: Record<string, string[]> = {
     "hasScroll", "withScrollbar", "scrollEnabled",
   ],
 
-  truncateText: [
+  "truncate-text": [
     "ellipsis", "overflow", "clip", "nowrap", "noWrap",
     "textOverflow", "truncate", "clamp",
     "textEllipsis", "overflowHidden", "isTruncated",
